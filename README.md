@@ -17,3 +17,7 @@ Se conserva el código y los recursos referenciados. Se excluyen dependencias in
 ## Estado
 
 Archivo académico original. Puede contener operaciones pendientes o dependencias antiguas. No se ha verificado la ejecución de todos los programas.
+
+## Configuración de Google y Firebase
+
+Las claves de ejemplo incluidas como `TU_FIREBASE_API_KEY` deben reemplazarse por la configuración de un proyecto propio. Revisar las restricciones de API, las reglas de acceso a los datos y App Check antes de usarlo. Una clave usada también con otras APIs de Google puede requerir restricciones adicionales.
