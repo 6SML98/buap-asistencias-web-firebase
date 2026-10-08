@@ -1,4 +1,10 @@
-# FINAL
+# Asistencias · Web
+
+Sistema web de asistencia escolar con administración de alumnos, registro y escaneo; integración Firebase configurable.
+
+Proyecto académico de BUAP. Proyecto final seleccionado.
+
+## Documentación y requisitos
 
 Proyecto o conjunto de prácticas académicas de BUAP. Se publica como parte del archivo de trabajos de `6SML98`.
 
