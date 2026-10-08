@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+    --bg-gradient-1: #efe6d0; /* parchment background */
+    --accent: #c88e3a; /* gold accent */
+    --muted: #5b3d2a; /* warm muted brown */
+    --card-bg: rgba(59,40,29,0.96); /* deep brown card */
+    --surface: #efe6d0; /* light parchment */
+    --gold-dark: #b07a2a;
+    --gold-light: #e6c89a;
+}
+
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial}
+
+html, body {height:100%;}
+html, body{
+    margin:0 !important;
+    /* Force solid brown parchment-like background (no external images) */
+    background: linear-gradient(180deg, #b88952 0%, #5b3924 100%) !important;
+    color: #2b1b11 !important;
+    min-height:100vh !important;
+}
+
+/* subtle overlay so content areas never show pure white if image fails */
+/* no image overlay needed when using solid color background */
+
+/* ensure page content stacks above overlay */
+.page-surface, .container, .card, .page-card{position:relative}
+
+/* removed fixed bottom pseudo-element to ensure all background layers scroll together */
+
+.app-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+
+.brand-title{color:var(--bg-gradient-1);font-weight:700;letter-spacing:-0.2px}
+.brand-sub{color:var(--muted)}
+
+.card-opcion{border-radius:14px;background:linear-gradient(180deg, rgba(63,42,30,0.98), rgba(45,30,22,0.98));box-shadow:0 10px 30px rgba(15,23,42,0.12);transition:transform .18s ease;border:0;color:var(--gold-light)}
+.card-opcion:hover{transform:translateY(-4px)}
+
+.icono{font-size:56px;color:var(--gold-light)}
+
+/* Stronger overrides to prevent Bootstrap utility classes from changing our colors */
+.card, .menu-card, .card-opcion, .page-card{background:linear-gradient(180deg, rgba(63,42,30,0.98), rgba(45,30,22,0.98)) !important;color:var(--gold-light) !important;border:0 !important}
+
+/* Ensure icons inside cards keep gold color even if they have utility classes */
+.card .icono, .menu-card .icono, .card-opcion .icono{color:var(--gold-light) !important}
+
+/* Buttons inside cards: rounded gold style */
+.card .btn, .menu-card .btn, .card-opcion .btn, .page-card .btn{border-radius:28px;padding:10px 22px;font-weight:700;box-shadow:0 6px 12px rgba(176,122,42,0.12);}
+.card .btn-primary, .menu-card .btn-primary, .card-opcion .btn-primary, .page-card .btn-primary{background:linear-gradient(180deg,var(--gold-light),var(--gold-dark)) !important;color:#2b1b11 !important;border:0 !important}
+.card .btn-success, .page-card .btn-success{background:linear-gradient(180deg,#c7a76b,#a67b3a) !important;color:#2b1b11 !important;border:0 !important}
+.card .btn-dark, .page-card .btn-dark{background:linear-gradient(180deg,#5a3f33,#3e2a22) !important;color:var(--gold-light) !important;border:0 !important}
+.card .btn-danger, .page-card .btn-danger{background:linear-gradient(180deg,#7a3a2a,#5c2a22) !important;color:#fff !important;border:0 !important}
+
+/* Form controls (inputs) inside brown cards */
+.card .form-control, .page-card .form-control, .menu-card .form-control{background:rgba(255,255,255,0.03) !important;border:1px solid rgba(255,255,255,0.04) !important;color:var(--gold-light) !important;border-radius:28px;padding:12px 18px}
+.card .form-control::placeholder, .page-card .form-control::placeholder{color:rgba(255,235,200,0.5) !important}
+
+/* Table rows on brown cards: keep text readable */
+.page-card .table, .page-card .table tbody td{background:transparent !important;color:var(--gold-light) !important}
+
+/* Ensure navbar uses soft parchment gradient when present */
+.navbar{background:linear-gradient(90deg,var(--surface),#302505) !important}
+
+/* Admin panel: force all buttons to the same beige/gold style */
+.admin-panel .btn{
+    background: linear-gradient(180deg,var(--gold-light),var(--gold-dark)) !important;
+    color: #2b1b11 !important;
+    border: 0 !important;
+    box-shadow: 0 6px 12px rgba(176,122,42,0.12) !important;
+}
+.admin-panel .btn:active{transform:translateY(1px)}
+
+.btn-primary, .btn-success, .btn-dark, .btn-danger{border-radius:24px;font-weight:700;padding:10px 18px}
+
+/* Gold primary button */
+.btn-primary{
+    background: linear-gradient(180deg,var(--gold-light),var(--gold-dark));
+    color: #2b1b11;border:0;box-shadow:0 6px 12px rgba(176,122,42,0.18);
+}
+.btn-primary:active{transform:translateY(1px)}
+
+/* Danger / destructive - warm red/brown */
+.btn-danger{
+    background: linear-gradient(180deg,#7a3a2a,#5c2a22);color:#fff;border:0
+}
+
+.btn-success{background:linear-gradient(180deg,#c7a76b,#a67b3a);color:#2b1b11;border:0}
+
+.btn-dark{background:linear-gradient(180deg,#5a3f33,#3e2a22);color:var(--gold-light);border:0}
+
+/* Global surface for interior pages */
+.page-surface{background:transparent !important;min-height:100vh;padding:36px}
+
+.page-card{border-radius:14px;background:linear-gradient(180deg, rgba(63,42,30,0.98), rgba(45,30,22,0.98));box-shadow:0 12px 30px rgba(11,20,37,0.12);border:0;color:var(--gold-light)}
+
+.table thead th{background:rgba(46,31,24,0.95);color:var(--gold-light);border:0}
+
+.result-box{border-radius:10px;background:linear-gradient(90deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));padding:14px;color:var(--gold-light)}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+    .icono{font-size:48px}
+}
+
+/* Mobile: stretch background to cover full page height to avoid bottom white gap */
+@media (max-width:900px){
+    body{
+        /* stretch the image to the full body area (may slightly distort) */
+        background-size: 100% 100% !important;
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+    }
+}
