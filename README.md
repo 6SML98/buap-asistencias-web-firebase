@@ -1,29 +1,19 @@
 # Asistencias · Web
 
-Sistema web de asistencia escolar con administración de alumnos, registro y escaneo; integración Firebase configurable.
+Sistema escolar web para registro de alumnos, listas, asistencias y códigos QR.
 
-Proyecto académico de BUAP. Proyecto final seleccionado.
+## Requisitos
 
-## Documentación y requisitos
+Navegador, servidor HTTP y un proyecto Firebase/Firestore propio.
 
+## Ejecutar
 
+Inicia `python -m http.server 8000` y abre http://localhost:8000/index.html. Reemplaza los valores de ejemplo en firebase-config.js por la configuración pública de tu proyecto. Configura las reglas de Firestore y prueba con alumnos ficticios.
 
-## Tecnologías y archivos
+## Verificación del 8 de octubre de 2026
 
-Extensiones de código: .css, .html, .js.
+JavaScript externo e inline válido; página y formulario cargados en el navegador. No se verificaron escritura/lectura en Firestore ni captura de cámara, porque la configuración publicada es de ejemplo. Las pantallas administrativas de esta práctica no constituyen autenticación ni autorización del servidor.
 
-## Ejecución
+## Versiones anteriores
 
-Abrir el HTML de entrada o servir esta carpeta con un servidor web local. Revisar las dependencias externas indicadas en cada página.
-
-## Contenido publicado
-
-Se conserva el código y los recursos referenciados. Se excluyen dependencias instaladas, resultados de compilación, configuraciones personales, documentos ajenos al programa y datos locales. Las configuraciones Firebase incluidas son ejemplos que deben reemplazarse por las de un proyecto propio.
-
-## Estado
-
-Archivo académico original. Puede contener operaciones pendientes o dependencias antiguas. No se ha verificado la ejecución de todos los programas.
-
-## Configuración de Google y Firebase
-
-Las claves de ejemplo incluidas como `TU_FIREBASE_API_KEY` deben reemplazarse por la configuración de un proyecto propio. Revisar las restricciones de API, las reglas de acceso a los datos y App Check antes de usarlo. Una clave usada también con otras APIs de Google puede requerir restricciones adicionales.
+versiones/ conserva variantes académicas anteriores. Las pruebas descritas corresponden al código principal; no se garantiza que todas las variantes funcionen.
